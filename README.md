@@ -1,5 +1,4 @@
-# LINKY_ESP32
-
+# LINKY_ESP8266
 
 ESP32 is used to monitor Linky TIC frame and record it to a InfluxDB database.
 
