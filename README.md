@@ -7,7 +7,9 @@ Alors que les trames evoluent toutes les secondes, Le depot sur InfluxDb se fait
 Il y a donc un prétraitement fait en local par l'ESP8266.
 
 La durée de connexion est d'environ 2 secondes et la consommation de 70mA.
-Pendant le prétraitement , la consommation est de 10/20mA
+Pendant le prétraitement , la consommation est de 10/20mA.
+
+La configuration des accés WiFi se fait dans le code source.
 
 La carte electronique est en developpement mais des fonctions sont déjà validées
 -Redressement, 
