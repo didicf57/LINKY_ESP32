@@ -1,13 +1,19 @@
 # LINKY_ESP8266
 
-An ESP8266 is used to monitor Linky TIC frames and record some values to a InfluxDB database.
+Un ESP8266 est utilisé pour lire les trames TIC venant du compteur Linky et de les enregistrer periodiquement dans une base InfluxDB.
 
-Due to low power energy available on LINKY interface, the consumption profil have to be managed efficiently.
-For this we monitor the received frame for 30 seconds and record some value needed for the database.
-Each 30 seconds we wake up the WiFi radio interface and send the datas to the database.
+Du fait de la faible energie fournie par le compteur, un stratégie de lecture vs depot est necessaire.
+Alors que les trames evoluent toutes les secondes, Le depot sur InfluxDb se fait en WiFi toutes les 30 secondes. 
+Il y a donc un prétraitement fait en local par l'ESP8266.
 
-WiFi connection and data writting takes around 1.5 seconds.
+La durée de connexion est d'environ 2 secondes et la consommation de 70mA.
+Pendant le prétraitement , la consommation est de 10/20mA
 
-The electronic part is in development but some function are already validated.
+La carte electronique est en developpement mais des fonctions sont déjà validées
+-Redressement, 
+-SuperCapa, 
+-Alimentation (LDO)
+-Mise en forme des trames Linky (opto et démodulation)
 
+a suivre
 
